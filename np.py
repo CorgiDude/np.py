@@ -11,7 +11,7 @@ last_sock.close()
 last_doc = minidom.parseString(last_xml)
 titles = last_doc.getElementsByTagName("title")
 if titles.count > 1:
-  print u"{np_text}: {track} (via Last.fm)".format(np_text = NP_TEXT, track = titles[1].childNodes[0].data).replace(u'\u2022', '--')
+  print u"{np_text}: {track} (via Last.fm)".format(np_text = NP_TEXT, track = titles[1].childNodes[0].data).replace(u'\u2013', '--')
 else:
   print "Hasn't listened to anything on Last.fm recently"
 
